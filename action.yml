@@ -83,6 +83,10 @@ inputs:
     description: |
       Used to skip the build cache.
     required: false
+  ARCHIVE:
+    description: |
+      Prebuilt deployment archive file type.
+    required: false
 
 outputs:
   PREVIEW_URL:

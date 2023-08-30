@@ -98,6 +98,9 @@ const context = {
 		key: 'FORCE',
 		type: 'boolean',
 		default: false
+	}),
+	ARCHIVE: parser.getInput({
+		key: 'ARCHIVE'
 	})
 }
 
