@@ -15946,7 +15946,8 @@ const context = {
 	}),
 	ALIAS_DOMAINS: parser.getInput({
 		key: 'ALIAS_DOMAINS',
-		type: 'array'
+		type: 'array',
+		disableable: true
 	}),
 	PR_PREVIEW_DOMAIN: parser.getInput({
 		key: 'PR_PREVIEW_DOMAIN'
@@ -15983,6 +15984,9 @@ const context = {
 		key: 'FORCE',
 		type: 'boolean',
 		default: false
+	}),
+	ARCHIVE: parser.getInput({
+		key: 'ARCHIVE'
 	})
 }
 
@@ -16039,6 +16043,7 @@ core.debug(
 )
 
 module.exports = context
+
 
 /***/ }),
 
@@ -16249,7 +16254,8 @@ const {
 	BUILD_ENV,
 	PREBUILT,
 	WORKING_DIRECTORY,
-	FORCE
+	FORCE,
+	ARCHIVE
 } = __nccwpck_require__(4570)
 
 const init = () => {
@@ -16272,6 +16278,10 @@ const init = () => {
 
 		if (PREBUILT) {
 			commandArguments.push('--prebuilt')
+		}
+
+		if (ARCHIVE) {
+			commandArguments.push(`--archive=${ARCHIVE}`)
 		}
 
 		if (FORCE) {
@@ -16350,6 +16360,7 @@ const init = () => {
 module.exports = {
 	init
 }
+
 
 /***/ }),
 
