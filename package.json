@@ -26,8 +26,8 @@
     "@actions/github": "^4.0.0",
     "action-input-parser": "^1.2.38",
     "dotenv": "^9.0.2",
-    "got": "^11.8.3",
-    "vercel": "^22.0.1"
+    "got": "^12.1.0",
+    "vercel": "^33.5.5"
   },
   "devDependencies": {
     "@betahuhn/config": "^1.2.0",
