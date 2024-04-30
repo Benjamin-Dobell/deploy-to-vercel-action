@@ -5,7 +5,7 @@ const execCmd = (command, args, cwd) => {
 	core.debug(`EXEC: "${ command } ${ args }" in ${ cwd || '.' }`)
 	return new Promise((resolve, reject) => {
 		const process = spawn(command, args, { cwd })
-		let stdout
+		let stdout = ''
 		let stderr
 
 		process.stdout.on('data', (data) => {
